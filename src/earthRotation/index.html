@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../assets/jquery/jquery-1.11.3.min.js"></script>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            background-color: rgba(0,0,0,0);
+        }
+        .banner{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 720px;
+            background-image: url("./img/banner-20180608.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .banner .container {
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .ball-cont{
+            width: 510px;height: 510px;
+            position: absolute;right: 0;top: 135px;z-index: 1;
+        }
+        .ball-bg{
+            overflow: hidden;
+            width: 510px;height: 510px;
+            background-image: url("./img/ball-bg.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Yaxle{
+            width: 100%;height: 100%;
+            background: transparent;
+            transform-style: preserve-3d;
+            transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        div.axlewire{
+            width:1px;height:380px;position: relative;margin: 66px auto 0;
+            background: transparent;
+            border-right: 1px dashed #1ca33c;
+            /*perspective: 800;*/
+            /*-webkit-perspective: 800;*/
+            transform-style: preserve-3d;
+            transform:rotateX(0deg) rotateY(0deg) rotateZ(16deg);
+            /*transform:perspective(800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);*/
+        }
+        .cirh{
+            border-radius: 50%;
+            position: absolute;top: 50%;left: 50%;
+            border: 2px solid #72c200;
+            background-color: rgba(114,194,0,0.2);
+        }
+        .cirh1{
+            width: 330px;height: 330px;margin: -165px 0 0 -165px;
+            transform:translateZ(0px) translateY(-95px) rotateX(90deg);
+            /*background: blue;*/
+        }
+        .cirh2{
+            width: 380px;height: 380px;margin: -190px 0 0 -190px;
+            transform:translateZ(0px) translateY(0px) rotateX(90deg);
+        }
+        .cirh3{
+            width: 330px;height: 330px;margin: -165px 0 0 -165px;
+            transform:translateZ(0px) translateY(95px) rotateX(90deg);
+            /*background: red;*/
+        }
+        .cirv{
+            position: absolute;left: 0;top: 0;
+            width: 380px;height: 380px;border-radius: 50%;
+            border: 2px solid #72c200;background: transparent;
+            margin-left: -190px;
+        }
+        .posContainer{
+            position: relative;width: 100%;height: 100%;
+            background: red;
+        }
+        /*.dot-cont{*/
+            /*position: absolute;z-index: 10;*/
+            /*width: 100px;height: 34px;margin: -17px 0 0 -50px;*/
+            /*transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);*/
+        /*}*/
+        .dot-cont{
+            text-align: left;
+            position: absolute;top: 50%;left: 50%;z-index: 10;
+            width: 100px;height: 28px;margin: -10px 0 0 -58px;
+            transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        .dot-cont .info{
+            display: inline-block;border: 1px solid #72c200;
+            padding:0 5px; color: #ffffff;font-size: 14px;
+            text-align: center;line-height: 28px;box-sizing: border-box;
+        }
+        .dot-cont .dot{
+            display: inline-block;border-radius: 50%;
+            width: 10px;height: 10px;border: 2px solid #72c200;
+            background: #000000;
+        }
+        .d1{
+
+        }
+    </style>
+</head>
+<body>
+<section class="banner">
+    <div class="container">
+        <div class="ball-cont">
+            <div class="ball-bg">
+                <div class="axlewire">
+                        <div class="center"></div>
+                        <div class="cirh cirh1"></div>
+                        <div class="cirh cirh2">
+                            <!--<div class="posContainer">-->
+                            <!--<div class="dot-cont">-->
+                            <!--<div class="dot"></div>-->
+                            <!--<div class="info">数据统计</div>-->
+                            <!--</div>-->
+                            <!--<div class="dot-cont">-->
+                            <!--<div class="dot"></div>-->
+                            <!--<div class="info">数据统计</div>-->
+                            <!--</div>-->
+                            <!--<div class="dot-cont">-->
+                            <!--<div class="dot"></div>-->
+                            <!--<div class="info">数据统计</div>-->
+                            <!--</div>-->
+                            <!--<div class="dot-cont">-->
+                            <!--<div class="dot"></div>-->
+                            <!--<div class="info">数据统计</div>-->
+                            <!--</div>-->
+                            <!--<div class="dot-cont">-->
+                            <!--<div class="dot"></div>-->
+                            <!--<div class="info">数据统计</div>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="cirh cirh3"></div>
+
+                        <div class="cirv cirv1"></div>
+                        <div class="cirv cirv2"></div>
+                        <div class="cirv cirv3"></div>
+                        <div class="cirv cirv4"></div>
+                        <div class="cirv cirv5"></div>
+                        <!--1点-->
+                        <div class="dot-cont d1">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d1">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d1">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d1">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d1">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+
+                        <!--点2-->
+                        <div class="dot-cont d2">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d2">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d2">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d2">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d2">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d2">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d2">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <!--点3-->
+                        <div class="dot-cont d3">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d3">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d3">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d3">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+                        <div class="dot-cont d3">
+                            <div class="dot"></div>
+                            <div class="info">数据统计</div>
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $(function(){
+        var imgl = $(".cirv").size();
+        var itmsdeg = parseFloat(360/imgl);
+        var rox=-10;
+        var roy=0;
+        var xn= 0,yn=0;
+        var play=false;
+        $(".cirv").each(function(i){
+            $(this).css({
+                "transform":'rotateY('+i*itmsdeg+'deg) translateZ(0px)',
+                "-webkit-transform":'rotateY('+i*itmsdeg+'deg) translateZ(0px)'
+            });
+            $(this).attr("ondragstart","return false");
+        });
+//        $(".cirh1 .dot-cont").each(function(i){
+//            var l = $(".dot-cont").size();
+//            var deg = parseFloat(360/l);
+//            $(this).css({
+//                "transform":'rotateY('+i*deg+'deg) translateZ(0px)',
+//                "-webkit-transform":'rotateY('+i*deg+'deg) translateZ(0px)'
+//            });
+//            $(this).attr("ondragstart","return false");
+//        });
+//        $(".cirh2 .dot-cont").each(function(i){
+//            var l = $(".dot-cont").size();
+//            var deg = parseFloat(360/l);
+//            $(this).css({
+//                "transform":'rotateY('+i*deg+'deg) translateZ(0px)',
+//                "-webkit-transform":'rotateY('+i*deg+'deg) translateZ(0px)'
+//            });
+//            $(this).attr("ondragstart","return false");
+//        });
+//        $(".cirh3 .dot-cont").each(function(i){
+//            var l = $(this).parents('.posContainer').find('.dot-cont').size();
+//            var r = $(this).parents('.posContainer').width()/2;
+//            var ox=r,oy=r;
+//            var radians = (Math.PI / 180) * Math.round(360 / l);
+//            var x = ox + r * Math.sin(radians * i),
+//                y = oy + r * Math.cos(radians * i);
+//            var deg = parseFloat(360/l);
+//            console.log(l,$(this).parents('.posContainer').width());
+//
+//            $(this).css({
+//                left: x+'px',
+//                top: y+'px',
+//            });
+//            $(this).attr("ondragstart","return false");
+//        });
+        $(".d1").each(function(i){
+            var l = $('.d1').size();
+            var deg = parseFloat(360/l);
+            $(this).css({
+                "transform":'rotateY('+i*deg+'deg) translateY(-95px) translateZ(165px)',
+            });
+            $(this).attr("ondragstart","return false");
+        });
+        $(".d2").each(function(i){
+            var l = $('.d2').size();
+            var deg = parseFloat(360/l);
+            $(this).css({
+                "transform":'rotateY('+i*deg+'deg) translateY(0px) translateZ(190px)',
+            });
+            $(this).attr("ondragstart","return false");
+        });
+        $(".d3").each(function(i){
+            var l = $('.d3').size();
+            var deg = parseFloat(360/l);
+            $(this).css({
+                "transform":'rotateY('+i*deg+'deg) translateY(95px) translateZ(165px)',
+            });
+            $(this).attr("ondragstart","return false");
+        });
+
+        /*
+        * 求圆周上等分点的坐标
+        * ox,oy为圆心坐标
+        * r为半径
+        * count为等分个数
+        */
+        function getPoint(r, ox, oy, count){
+            var point = []; //结果
+            var radians = (Math.PI / 180) * Math.round(360 / count), //弧度
+                i = 0;
+            for(; i < count; i++){
+                var x = ox + r * Math.sin(radians * i),
+                    y = oy + r * Math.cos(radians * i);
+
+                point.unshift({x:x,y:y}); //为保持数据顺时针
+            }
+        }
+//        getPoint();
+        var $dragDom = $('.axlewire');
+        $(document).mousedown(function(ev){
+        clearInterval(play);
+        var x_=ev.clientX;
+        var y_=ev.clientY;
+        $(this).bind("mousemove",function(ev){
+                var x=ev.clientX;
+                var y=ev.clientY;
+                xn= x-x_;
+                yn= y-y_;
+                roy += xn*0.2;
+                rox -= yn*0.1;
+                roz =16;
+            console.log('mousemove',roy,roz);
+                $dragDom.css({
+                    "transform":'rotateX(0deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)',
+                    "-webkit-transform":'rotateX(0deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)'
+                });
+                x_=ev.clientX;
+                y_=ev.clientY;
+            })
+        }).mouseup(function(){
+            $(this).unbind("mousemove");
+            var play= setInterval(function(){
+                xn*=0.95; //xn=xn*0.95
+                yn*=0.95;
+                if(Math.abs(xn)<1&&Math.abs(yn)<1){
+                    clearInterval(play);
+                }
+                roy += xn*0.2;
+                rox -= yn*0.1;
+                roz =16;
+                console.log('mouseup',roy,roz);
+                $dragDom.css({
+                    "transform":' rotateX(0deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)',
+                    "-webkit-transform":'rotateX(0deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)'
+                });
+            },30)
+
+        })
+    })
+</script>
+
+</body>
+</html>
