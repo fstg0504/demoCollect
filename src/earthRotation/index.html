@@ -27,88 +27,159 @@
             margin: 0 auto;
             text-align: center;
         }
+        /*球旋转*/
         .ball-cont{
-            width: 510px;height: 510px;
-            position: absolute;right: 0;top: 135px;z-index: 1;
+            width: 620px;height: 620px;
+            position: absolute;right: 0;top: 70px;z-index: 1;
         }
         .ball-bg{
             overflow: hidden;
-            width: 510px;height: 510px;
-            background-image: url("./img/ball-bg.png");
+            position: relative;
+            width: 620px;height: 620px;
+            background-image: url("./img/ball-bg2.png");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
             cursor: pointer;
         }
-        .Yaxle{
-            width: 100%;height: 100%;
-            background: transparent;
-            transform-style: preserve-3d;
-            transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        .axlewire-cont{
+            position: absolute;z-index: 5;
+            width: 620px;height: 620px;
+            left: 0;right: 0;bottom: 0;top: 0;
         }
         div.axlewire{
-            width:1px;height:380px;position: relative;margin: 66px auto 0;
+            width:1px;height:380px;position: relative;margin: 120px auto 0;
             background: transparent;
             border-right: 1px dashed #1ca33c;
-            /*perspective: 800;*/
-            /*-webkit-perspective: 800;*/
             transform-style: preserve-3d;
             transform:rotateX(0deg) rotateY(0deg) rotateZ(16deg);
-            /*transform:perspective(800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);*/
+        }
+        div.axlewire.ani{
+            animation: myrotate 30s linear infinite forwards;
         }
         .cirh{
             border-radius: 50%;
             position: absolute;top: 50%;left: 50%;
             border: 2px solid #72c200;
-            background-color: rgba(114,194,0,0.2);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         .cirh1{
             width: 330px;height: 330px;margin: -165px 0 0 -165px;
             transform:translateZ(0px) translateY(-95px) rotateX(90deg);
-            /*background: blue;*/
+            background-image: url("./img/320-320.png");
         }
         .cirh2{
             width: 380px;height: 380px;margin: -190px 0 0 -190px;
             transform:translateZ(0px) translateY(0px) rotateX(90deg);
+            background-image: url("./img/380-380.png");
         }
         .cirh3{
             width: 330px;height: 330px;margin: -165px 0 0 -165px;
             transform:translateZ(0px) translateY(95px) rotateX(90deg);
-            /*background: red;*/
+            background-image: url("./img/320-320.png");
+        }
+        .cirh4{
+            width: 200px;height: 200px;margin: -100px 0 0 -100px;
+            transform:translateZ(0px) translateY(160px) rotateX(90deg);
+            background-image: url("./img/200-200.png");
         }
         .cirv{
             position: absolute;left: 0;top: 0;
             width: 380px;height: 380px;border-radius: 50%;
-            border: 2px solid #72c200;background: transparent;
             margin-left: -190px;
+            /*border: 2px solid #20e03f;*/
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
         }
-        .posContainer{
-            position: relative;width: 100%;height: 100%;
-            background: red;
+        .cirv1{
+            background-image: url("./img/cirv1.png");border: none;
         }
-        /*.dot-cont{*/
-            /*position: absolute;z-index: 10;*/
-            /*width: 100px;height: 34px;margin: -17px 0 0 -50px;*/
-            /*transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);*/
-        /*}*/
+        .cirv2{
+            background-image: url("./img/cirv2.png");border: none;
+        }
+        .cirv3{
+            background-image: url("./img/cirv3.png");border: none;
+        }
+        .cirv4{
+            background-image: url("./img/cirv4.png");border: none;
+        }
+        .cirv5{
+            background-image: url("./img/cirv4.png");border: none;
+        }
         .dot-cont{
             text-align: left;
             position: absolute;top: 50%;left: 50%;z-index: 10;
-            width: 100px;height: 28px;margin: -10px 0 0 -58px;
-            transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            width: 100px;height: 28px;margin: -13px 0 0 -56px;
+            /*transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);*/
         }
-        .dot-cont .info{
-            display: inline-block;border: 1px solid #72c200;
+        .axlewire .dc1{transform: rotateY(-3deg) translateY(0px) translateZ(190px);}
+        .axlewire .dc2{transform: rotateY(68deg) translateY(0px) translateZ(195px);}
+        .axlewire .dc3{transform: rotateY(102deg) translateY(0px) translateZ(195px);}
+        .axlewire .dc4{transform: rotateY(173deg) translateY(0px) translateZ(195px);}
+        .axlewire .dc5{transform: rotateY(210deg) translateY(0px) translateZ(190px);}
+        .axlewire .dc6{transform: rotateY(257deg) translateY(0px) translateZ(190px);}
+        .axlewire .dc7{transform: rotateY(321deg) translateY(0px) translateZ(190px);}
+        .axlewire .dot-cont .info{
+            display: inline-block;border: 1px solid #20e03f;
             padding:0 5px; color: #ffffff;font-size: 14px;
             text-align: center;line-height: 28px;box-sizing: border-box;
+            /*box-shadow:0px 0px 5px 4px #252d22 inset;*/
+            text-decoration: none;
+            background-color: rgba(37,45,34,1);
         }
         .dot-cont .dot{
             display: inline-block;border-radius: 50%;
-            width: 10px;height: 10px;border: 2px solid #72c200;
+            width: 10px;height: 10px;border: 2px solid #20e03f;
             background: #000000;
         }
-        .d1{
+        .ball-shade1{
+            position: absolute;
+            top: 50%;left: 50%;z-index: 3;margin: -190px 0 0 -190px;
+            width: 380px;height: 380px;border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("./img/ball-shade3.png");
+            background-color: rgba(35,90,70,0.82);
+        }
+        .ball-shade1.ani{
+            animation: myrotate2 30s linear infinite forwards;
+        }
 
+        .roaDot{
+            width: 10px;height: 10px;border-radius: 50%;
+            position: absolute;
+            margin: -5px 0 0 -5px;border: 2px solid #20e03f;
+        }
+        .roaDot-cont{
+            position: absolute;width: 6px;height: 6px;
+            left: 50%;top: 50%;margin: -3px 0 0 -3px;
+            animation: roaDotrotate 10s linear infinite forwards;
+        }
+        .rd1{
+            top: 121px;left: 233px;
+        }
+        .rd2{
+            right:206px;bottom: 152px;
+        }
+        @keyframes roaDotrotate
+        {
+            0% {transform: rotateX(0deg) rotateZ(0deg)}
+            100% {transform: rotateX(0deg) rotateZ(360deg)}
+        }
+        @keyframes myrotate
+        {
+            0% {transform: rotateX(0deg) rotateY(0deg) rotateZ(16deg);}
+            100% {transform: rotateX(0deg) rotateY(360deg) rotateZ(16deg);}
+        }
+        @keyframes myrotate2
+        {
+            0% {transform: rotateY(0deg)}
+            100% {transform: rotateY(-360deg)}
         }
     </style>
 </head>
@@ -117,120 +188,105 @@
     <div class="container">
         <div class="ball-cont">
             <div class="ball-bg">
-                <div class="axlewire">
+                <div class="axlewire-cont">
+                    <div class="axlewire ani">
                         <div class="center"></div>
+                        <div class="ball-shade1 ani"></div>
                         <div class="cirh cirh1"></div>
-                        <div class="cirh cirh2">
-                            <!--<div class="posContainer">-->
-                            <!--<div class="dot-cont">-->
-                            <!--<div class="dot"></div>-->
-                            <!--<div class="info">数据统计</div>-->
-                            <!--</div>-->
-                            <!--<div class="dot-cont">-->
-                            <!--<div class="dot"></div>-->
-                            <!--<div class="info">数据统计</div>-->
-                            <!--</div>-->
-                            <!--<div class="dot-cont">-->
-                            <!--<div class="dot"></div>-->
-                            <!--<div class="info">数据统计</div>-->
-                            <!--</div>-->
-                            <!--<div class="dot-cont">-->
-                            <!--<div class="dot"></div>-->
-                            <!--<div class="info">数据统计</div>-->
-                            <!--</div>-->
-                            <!--<div class="dot-cont">-->
-                            <!--<div class="dot"></div>-->
-                            <!--<div class="info">数据统计</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                        </div>
+                        <div class="cirh cirh2"></div>
                         <div class="cirh cirh3"></div>
+                        <div class="cirh cirh4"></div>
 
                         <div class="cirv cirv1"></div>
-                        <div class="cirv cirv2"></div>
-                        <div class="cirv cirv3"></div>
                         <div class="cirv cirv4"></div>
+                        <div class="cirv cirv2"></div>
                         <div class="cirv cirv5"></div>
+                        <div class="cirv cirv3"></div>
                         <!--1点-->
                         <div class="dot-cont d1">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">业务发起</a>
                         </div>
                         <div class="dot-cont d1">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">需求梳理</a>
                         </div>
                         <div class="dot-cont d1">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">产品原型</a>
                         </div>
                         <div class="dot-cont d1">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">UI设计</a>
                         </div>
                         <div class="dot-cont d1">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">项目管理</a>
                         </div>
 
                         <!--点2-->
-                        <div class="dot-cont d2">
+                        <div class="dot-cont d2 dc1">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">团队协作</a>
                         </div>
-                        <div class="dot-cont d2">
+                        <div class="dot-cont d2 dc2">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">APP开发</a>
                         </div>
-                        <div class="dot-cont d2">
+                        <div class="dot-cont d2 dc3">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">API云模块</a>
                         </div>
-                        <div class="dot-cont d2">
+                        <div class="dot-cont d2 dc4">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">开云主机</a>
                         </div>
-                        <div class="dot-cont d2">
+                        <div class="dot-cont d2 dc5">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">后端开发</a>
                         </div>
-                        <div class="dot-cont d2">
+                        <div class="dot-cont d2 dc6">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">运维管理</a>
                         </div>
-                        <div class="dot-cont d2">
+                        <div class="dot-cont d2 dc7">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">企业安全</a>
                         </div>
                         <!--点3-->
                         <div class="dot-cont d3">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">数据统计</a>
                         </div>
                         <div class="dot-cont d3">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">信息推送</a>
                         </div>
                         <div class="dot-cont d3">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">版本迭代</a>
                         </div>
                         <div class="dot-cont d3">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">测试加固</a>
                         </div>
                         <div class="dot-cont d3">
                             <div class="dot"></div>
-                            <div class="info">数据统计</div>
+                            <a href="javascript:void (0)" target="_blank"  class="info">打包编译</a>
                         </div>
-
                     </div>
+                </div>
+                <div class="roaDot-cont">
+                    <div class="roaDot rd1"></div>
+                    <div class="roaDot rd2"></div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <script>
     $(function(){
+        //球旋转效果
         var imgl = $(".cirv").size();
         var itmsdeg = parseFloat(360/imgl);
         var rox=-10;
@@ -244,53 +300,11 @@
             });
             $(this).attr("ondragstart","return false");
         });
-//        $(".cirh1 .dot-cont").each(function(i){
-//            var l = $(".dot-cont").size();
-//            var deg = parseFloat(360/l);
-//            $(this).css({
-//                "transform":'rotateY('+i*deg+'deg) translateZ(0px)',
-//                "-webkit-transform":'rotateY('+i*deg+'deg) translateZ(0px)'
-//            });
-//            $(this).attr("ondragstart","return false");
-//        });
-//        $(".cirh2 .dot-cont").each(function(i){
-//            var l = $(".dot-cont").size();
-//            var deg = parseFloat(360/l);
-//            $(this).css({
-//                "transform":'rotateY('+i*deg+'deg) translateZ(0px)',
-//                "-webkit-transform":'rotateY('+i*deg+'deg) translateZ(0px)'
-//            });
-//            $(this).attr("ondragstart","return false");
-//        });
-//        $(".cirh3 .dot-cont").each(function(i){
-//            var l = $(this).parents('.posContainer').find('.dot-cont').size();
-//            var r = $(this).parents('.posContainer').width()/2;
-//            var ox=r,oy=r;
-//            var radians = (Math.PI / 180) * Math.round(360 / l);
-//            var x = ox + r * Math.sin(radians * i),
-//                y = oy + r * Math.cos(radians * i);
-//            var deg = parseFloat(360/l);
-//            console.log(l,$(this).parents('.posContainer').width());
-//
-//            $(this).css({
-//                left: x+'px',
-//                top: y+'px',
-//            });
-//            $(this).attr("ondragstart","return false");
-//        });
         $(".d1").each(function(i){
             var l = $('.d1').size();
             var deg = parseFloat(360/l);
             $(this).css({
-                "transform":'rotateY('+i*deg+'deg) translateY(-95px) translateZ(165px)',
-            });
-            $(this).attr("ondragstart","return false");
-        });
-        $(".d2").each(function(i){
-            var l = $('.d2').size();
-            var deg = parseFloat(360/l);
-            $(this).css({
-                "transform":'rotateY('+i*deg+'deg) translateY(0px) translateZ(190px)',
+                "transform":'rotateY('+i*deg+'deg) translateY(-95px) translateZ(170px)',
             });
             $(this).attr("ondragstart","return false");
         });
@@ -298,46 +312,32 @@
             var l = $('.d3').size();
             var deg = parseFloat(360/l);
             $(this).css({
-                "transform":'rotateY('+i*deg+'deg) translateY(95px) translateZ(165px)',
+                "transform":'rotateY('+i*deg+'deg) translateY(95px) translateZ(170px)',
             });
             $(this).attr("ondragstart","return false");
         });
-
-        /*
-        * 求圆周上等分点的坐标
-        * ox,oy为圆心坐标
-        * r为半径
-        * count为等分个数
-        */
-        function getPoint(r, ox, oy, count){
-            var point = []; //结果
-            var radians = (Math.PI / 180) * Math.round(360 / count), //弧度
-                i = 0;
-            for(; i < count; i++){
-                var x = ox + r * Math.sin(radians * i),
-                    y = oy + r * Math.cos(radians * i);
-
-                point.unshift({x:x,y:y}); //为保持数据顺时针
-            }
-        }
-//        getPoint();
         var $dragDom = $('.axlewire');
         $(document).mousedown(function(ev){
-        clearInterval(play);
-        var x_=ev.clientX;
-        var y_=ev.clientY;
-        $(this).bind("mousemove",function(ev){
+            clearInterval(play);
+            var x_=ev.clientX;
+            var y_=ev.clientY;
+            $(this).bind("mousemove",function(ev){
                 var x=ev.clientX;
                 var y=ev.clientY;
                 xn= x-x_;
                 yn= y-y_;
                 roy += xn*0.2;
                 rox -= yn*0.1;
+//                rox = 0;
                 roz =16;
-            console.log('mousemove',roy,roz);
+                $dragDom.removeClass('ani');
+                $('.ball-shade1').removeClass('ani');
                 $dragDom.css({
-                    "transform":'rotateX(0deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)',
-                    "-webkit-transform":'rotateX(0deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)'
+                    "transform":'rotateX('+rox+'deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)',
+                    "-webkit-transform":'rotateX('+rox+'deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)'
+                });
+                $('.ball-shade1').css({
+                    "transform":'rotateY('+(-roy)+'deg)'
                 });
                 x_=ev.clientX;
                 y_=ev.clientY;
@@ -349,17 +349,21 @@
                 yn*=0.95;
                 if(Math.abs(xn)<1&&Math.abs(yn)<1){
                     clearInterval(play);
+                    $dragDom.addClass('ani');
+                    $('.ball-shade1').addClass('ani');
                 }
                 roy += xn*0.2;
                 rox -= yn*0.1;
+//                rox = 0;
                 roz =16;
-                console.log('mouseup',roy,roz);
                 $dragDom.css({
-                    "transform":' rotateX(0deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)',
-                    "-webkit-transform":'rotateX(0deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)'
+                    "transform":' rotateX('+rox+'deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)',
+                    "-webkit-transform":'rotateX('+rox+'deg) rotateY('+roy+'deg) rotateZ('+roz+'deg)'
+                });
+                $('.ball-shade1').css({
+                    "transform":'rotateY('+(-roy)+'deg)'
                 });
             },30)
-
         })
     })
 </script>
